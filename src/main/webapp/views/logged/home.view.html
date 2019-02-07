@@ -1,0 +1,59 @@
+<div class="jumbotron jumbotron-fluid main-title">
+    <h2 class="component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-814474">vicente</h2>
+</div>
+<div id="cssmenu">
+<ul>
+   <li><a href="#"><span>Início</span></a></li>
+   <li class="active has-sub"><a href="#"><span>Teste Um</span></a>
+      <ul>
+         <li class="has-sub"><a href="#"><span>Teste Dois</span></a>
+            <ul>
+               <li><a href="#"><span>Teste Tres</span></a></li>
+               <li class="last"><a href="#"><span>Teste Quatro</span></a></li>
+            </ul>
+         </li>
+         <li class="has-sub"><a href="#"><span>Teste Quatro</span></a>
+            <ul>
+               <li><a href="#"><span>Sub Um</span></a></li>
+               <li class="last"><a href="#"><span>Sub Dois</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href="#"><span>Sub Tres</span></a></li>
+   <li class="last"><a href="#"><span>Sub</span></a></li>
+</ul>
+</div>
+<div ui-view="" class="container-fluid main-view main-view-horizontal" data-container="true">
+</div> 
+<div class="modal fade" id="modalPassword">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-validation" autocomplete="off" name="form" role="form">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" ng-required="true">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-fab k-button" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading"><span class="k-icon k-i-check"></span></button>
+        <button class="btn btn-default btn-fab k-button" type="button" data-dismiss="modal"><span class="k-icon k-i-close"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
